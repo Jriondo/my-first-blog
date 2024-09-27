@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+    <head>
+        <title>Django Girls blog</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    
+    <body>
+        <div class="page-header">
+            <h1><a href="/">LA MUSICA 🎻🎧</a></h1>
+        </div>
+        
+        <div></div>
+            <p>La música es una forma de arte que utiliza el sonido y el silencio para expresar emociones, contar historias y conectar a las personas. Desde melodías simples hasta composiciones complejas, abarca una variedad de géneros y estilos que reflejan la diversidad cultural y la creatividad humana. La música puede ser una fuente de inspiración, consuelo y alegría, y juega un papel fundamental en la vida cotidiana de millones de personas en todo el mundo. </p>
+            <h2><a href=""> La Música en la Antigüedad 🎶</a></h2>
+            <p>La música en la antigüedad era fundamental en la vida de las civilizaciones. Utilizada en rituales, celebraciones y actividades cotidianas, instrumentos como liras, flautas y tambores eran comunes. Los griegos hicieron importantes aportes a la teoría musical, explorando la relación entre música y matemáticas. La notación musical comenzó a desarrollarse, permitiendo la transmisión de composiciones a lo largo del tiempo. Así, la música no solo entretenía, sino que también educaba y unía a las comunidades, sentando las bases de las tradiciones que conocemos hoy.</p>
+        </div>  
+    
+        <div>
+            <h2><a href="">La Música en la Edad Media 🎵</a></h2>
+            <p>La música en la Edad Media (siglos V-XV) refleja una rica cultura. Dominada por la Iglesia, el canto gregoriano era fundamental en las liturgias. Con el tiempo, surgió la música secular, impulsada por trovadores y juglares que contaban historias de amor y aventura.
+
+                Instrumentos como el laúd y el órgano se volvieron populares, y la notación musical permitió conservar composiciones. Al final de este periodo, la polifonía abrió camino al Renacimiento, dejando un legado que aún resuena en la música actual.</p>
+        </div>
+
+        <div>
+            <h2><a href=""> La Música en la Actualidad 🎧</a></h2>
+            <p>La música en la actualidad es un fenómeno global y diverso, impulsada por la tecnología y el acceso digital. Géneros como el pop, hip-hop, rock y música electrónica dominan las listas, mientras que plataformas como Spotify y YouTube permiten a artistas independientes llegar a audiencias masivas.
+
+                La fusión de estilos y la colaboración entre músicos de diferentes culturas enriquecen el panorama musical. Además, la música se ha convertido en una herramienta poderosa para la expresión social y política.
+                
+                En este entorno dinámico, la música sigue evolucionando, reflejando las realidades y emociones del mundo moderno.</p>
+        </div>
+        
+        <div>
+            <<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                            <div class="post">
+                                <div class="date">
+                                    <p>publicado: 26 de sep del 2024{{ post.published_date }}</p>
+                                </div>
+                                <p>{{ post.text|linebreaksbr }}</p>
+                            </div>
+                        <p>No hay publicaciones disponibles.</p>
+                </div>
+            </div>
+        </div>
+      
+    </body>
+</html>
+
